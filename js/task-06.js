@@ -3,7 +3,6 @@ const refs = {
   inputValidationValid: document.querySelector("#validation-input .valid"),
   inputValidationInValid: document.querySelector("#validation-input .invalid"),
 };
-// console.log(refs.inputValidation.getAttribute("data-length"));
 refs.inputValidation.addEventListener("blur", onInputBlur);
 
 function onInputBlur() {

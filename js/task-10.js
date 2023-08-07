@@ -15,14 +15,14 @@ refs.btnCreate.addEventListener("click", createBoxes);
 refs.btnDestroy.addEventListener("click", destroyBoxes);
 
 function createBoxes() {
-  destroyBoxes();
   const amount = refs.input.value;
   const arr = [];
 
   for (let i = 1; i <= amount; i++) {
     const newBoxes = document.createElement("div");
-    newBoxes.style.width = `${30 * i}px`;
-    newBoxes.style.height = `${30 * i}px`;
+
+    newBoxes.style.width = `${30 + (i - 1) * 10}px`;
+    newBoxes.style.height = `${30 + (i - 1) * 10}px`;
     newBoxes.style.border = "1px solid black";
     newBoxes.style.backgroundColor = getRandomHexColor();
 
@@ -33,5 +33,6 @@ function createBoxes() {
 }
 
 function destroyBoxes() {
+  refs.input.value = "";
   refs.boxes.innerHTML = "";
 }

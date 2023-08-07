@@ -7,9 +7,7 @@ const refs = {
 refs.inputValidation.addEventListener("blur", onInputBlur);
 
 function onInputBlur() {
-  const neccessaryLength = parseInt(
-    refs.inputValidation.getAttribute("data-length")
-  );
+  const neccessaryLength = parseInt(refs.inputValidation.dataset.length);
   const currentLength = refs.inputValidation.value.length;
 
   if (currentLength === neccessaryLength) {

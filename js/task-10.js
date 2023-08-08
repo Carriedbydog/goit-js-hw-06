@@ -21,8 +21,6 @@ function createBoxes() {
 
   for (let i = 1; i <= amount; i++) {
     const newBoxes = document.createElement("div");
-    // newBoxes.style.width = `${30 + (i - 1) * 10}px`;
-    // newBoxes.style.height = `${30 + (i - 1) * 10}px`;
     newBoxes.style.width = `${sizeBox}px`;
     newBoxes.style.height = `${sizeBox}px`;
     newBoxes.style.border = "1px solid black";
